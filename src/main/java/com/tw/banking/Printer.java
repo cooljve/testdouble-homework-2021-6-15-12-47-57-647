@@ -35,8 +35,8 @@ public class Printer {
         List<String> lines = new ArrayList<>();
         Collections.sort(copyOfTransactions);
         int runningBalance = 0;
-        for (Transaction transaction: copyOfTransactions) {
-            runningBalance+= transaction.amount();
+        for (Transaction transaction : copyOfTransactions) {
+            runningBalance += transaction.amount();
             lines.add(statementLine(transaction, runningBalance));
         }
         return lines;
@@ -47,6 +47,6 @@ public class Printer {
                 + SEPARATOR
                 + transaction.amount()
                 + SEPARATOR
-                 + runningBalance;
+                + runningBalance;
     }
 }
